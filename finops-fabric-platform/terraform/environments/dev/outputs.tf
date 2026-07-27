@@ -9,3 +9,4 @@ output "resourceGroupId" {
   value = module.resourceGroup.resourceGroupId
 
 }
+

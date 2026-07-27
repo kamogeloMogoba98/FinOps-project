@@ -17,3 +17,11 @@ variable "environmentName" {
   description = "Environment"
   type        = string
 }
+
+variable "storageAccountName" {
+  type = string
+}
+
+variable "containerNames" {
+  type = list(string)
+}
