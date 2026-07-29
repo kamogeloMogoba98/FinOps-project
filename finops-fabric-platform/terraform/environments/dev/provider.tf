@@ -5,3 +5,8 @@ provider "azurerm" {
   subscription_id = var.subscriptionId
 
 }
+
+
+provider "fabric" {
+
+}

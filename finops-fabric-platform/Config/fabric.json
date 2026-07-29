@@ -1,0 +1,15 @@
+{
+    "workspaceName": "finOpsFabricWorkspace",
+    "description": "Microsoft Fabric workspace for the FinOps Platform",
+
+    "lakehouses": {
+        "bronze": "lhFinOpsBronze",
+        "silver": "lhFinOpsSilver"
+    },
+
+    "warehouse": "whFinOpsGold",
+
+    "shortcut": {
+        "name": "costexportsShortcut"
+    }
+}

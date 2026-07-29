@@ -25,3 +25,23 @@ variable "storageAccountName" {
 variable "containerNames" {
   type = list(string)
 }
+
+variable "workspaceName" {
+  default = "finops-dev-workspace"
+}
+
+variable "workspaceDescription" {
+  default = "Development workspace for the FinOps Fabric Platform"
+}
+
+variable "warehouseName" {
+  description = "Gold Warehouse Name"
+  type        = string
+
+  default = "goldWarehouse"
+}
+
+variable "capacity_name" {
+  description = "The Fabric Capacity display name"
+  type        = string
+}
