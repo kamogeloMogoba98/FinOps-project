@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "9ca5996c-f629-8e5c-4961-f221fc88b8c1",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "pipelineFinOpsBronzeTOSilver",
+        "description": "This pipeline is executed to run the finOpsBronzeTOSilver notebook daily.\n",
+        "dependsOn": []
+      }
+    ]
+  }
+}
