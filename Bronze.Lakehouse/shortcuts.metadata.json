@@ -1,0 +1,40 @@
+[
+  {
+    "name": "silver_amortized_cost_kamotest",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/silver_amortized_cost_kamotest",
+        "itemId": "7f68f078-da7a-bd39-44f1-db99038d934f",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Lakehouse"
+      }
+    }
+  },
+  {
+    "name": "silver_amortized_cost",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/silver_amortized_cost_kamotest",
+        "itemId": "7f68f078-da7a-bd39-44f1-db99038d934f",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Lakehouse"
+      }
+    }
+  },
+  {
+    "name": "CostExports",
+    "path": "/Files/CostExports",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "78d0ed62-6d0e-4828-8009-412ea63573ac",
+        "location": "https://stfinopsdev001.dfs.core.windows.net",
+        "subpath": "/costexports"
+      }
+    }
+  }
+]
