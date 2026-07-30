@@ -131,3 +131,12 @@ module "bronzeShortcut" {
     module.bronzeLakehouse
   ]
 }
+
+module "fabric_git_sync" {
+  source            = "../../modules/fabric/git"
+  workspace_id      = module.fabricWorkspace.workspaceId # Updated to match your output
+  git_connection_id = "169eaf5b-817a-4a93-b203-d1223835b23a"
+  repo_owner        = "kamogeloMogoba98"
+  repo_name         = "finops-fabric-platform"
+  branch_name       = "dev"
+}
