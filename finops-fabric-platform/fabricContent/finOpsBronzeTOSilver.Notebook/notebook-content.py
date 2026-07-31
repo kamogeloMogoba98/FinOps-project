@@ -25,16 +25,71 @@
 
 # CELL ********************
 
-# Source remains in Bronze (or wherever your raw files are)
-BRONZE_CSV_PATH = "Files/CostExports/CostExports/Finopsdaily/finops-amortized-cost/20260701-20260731/5033cf31-ff03-4530-83f2-1fce8e730869/*.csv.gz"
+from notebookutils import mssparkutils
 
-# Explicit ABFS path to your Silver Lakehouse 'Files' and 'Tables' directories
-SILVER_ABFS_FILES = "abfss://e3bf5bc5-4896-4874-a9a1-86628856bc54@onelake.dfs.fabric.microsoft.com/038d934f-db99-44f1-bd39-da7a7f68f078/Files"
-SILVER_ABFS_TABLES = "abfss://e3bf5bc5-4896-4874-a9a1-86628856bc54@onelake.dfs.fabric.microsoft.com/038d934f-db99-44f1-bd39-da7a7f68f078/Tables"
 
-STAGING_CSV_FILES_PATH = f"{SILVER_ABFS_FILES}/silver_staged_csv/amortized_cost"
-TARGET_TABLE_LOCATION = f"{SILVER_ABFS_TABLES}/dbo/silver_amortized_cost"
-TARGET_TABLE_NAME = "dbo.silver_amortized_cost"
+# Fetch the current active lakehouse metadata
+lakehouse_info_silver = mssparkutils.lakehouse.get("Silver")
+lakehouse_info_bronze = mssparkutils.lakehouse.get("Bronze") 
+
+# Extract IDs
+workspace_id = lakehouse_info_silver.workspaceId
+lakehouse_id_silver = lakehouse_info_silver.id
+lakehouse_id_bronze = lakehouse_info_bronze.id
+
+print(f"Workspace ID: {workspace_id}")
+print(f"Lakehouse ID silver: {lakehouse_id_silver}") 
+print(f"Lakehouse ID bronze: {lakehouse_id_bronze}")
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+# Explicit absolute path using your specific workspace and lakehouse IDs
+
+path_str_date = f"abfss://{workspace_id}@onelake.dfs.fabric.microsoft.com/{lakehouse_id_bronze}/Files/CostExports/CostExports/Finopsdaily/finops-amortized-cost/"
+
+sc = spark.sparkContext
+conf = sc._jsc.hadoopConfiguration()
+path_obj_date = sc._jvm.org.apache.hadoop.fs.Path(path_str_date)
+fs_date = path_obj_date.getFileSystem(conf)
+status_list_date = fs_date.listStatus(path_obj_date)
+folder_name_date = [status.getPath().getName() for status in status_list_date if status.isDirectory()]
+
+
+
+#iterate the []
+for x in folder_name_date:
+    x   
+folder_name_date=x 
+
+
+#we have to find the date value  first to add to the path to find the guid 
+
+
+path_str_guid = f"abfss://{workspace_id}@onelake.dfs.fabric.microsoft.com/{lakehouse_id_bronze}/Files/CostExports/CostExports/Finopsdaily/finops-amortized-cost/{folder_name_date}/"
+path_obj_guid = sc._jvm.org.apache.hadoop.fs.Path(path_str_guid)
+fs_guid = path_obj_guid.getFileSystem(conf)
+status_list_guid = fs_guid.listStatus(path_obj_guid)
+folder_name_guid = [status.getPath().getName() for status in status_list_guid if status.isDirectory()]
+
+#iterate the []
+for x in folder_name_guid:
+    x   
+folder_name_guid=x 
+
+
+print("available date folder:", folder_name_date )
+print("available GUID folder :", folder_name_guid )
+
+
+
 
 # METADATA ********************
 
@@ -56,17 +111,29 @@ from pyspark.sql.types import MapType, StringType, DecimalType
 
 # Source remains in Bronze (or wherever your raw files 
 
-BRONZE_CSV_PATH = "Files/CostExports/CostExports/Finopsdaily/finops-amortized-cost/20260701-20260731/5033cf31-ff03-4530-83f2-1fce8e730869/*.csv.gz"
+# Construct the dynamic Bronze CSV path using the variables
+BRONZE_CSV_PATH = f"abfss://{workspace_id}@onelake.dfs.fabric.microsoft.com/{lakehouse_id_bronze}/Files/CostExports/CostExports/Finopsdaily/finops-amortized-cost/{folder_name_date}/{folder_name_guid}/*.csv.gz"
 
-# Explicit ABFS path to your Silver Lakehouse 'Files' and 'Tables' directories
-SILVER_ABFS_FILES = "abfss://e3bf5bc5-4896-4874-a9a1-86628856bc54@onelake.dfs.fabric.microsoft.com/038d934f-db99-44f1-bd39-da7a7f68f078/Files"
-SILVER_ABFS_TABLES = "abfss://e3bf5bc5-4896-4874-a9a1-86628856bc54@onelake.dfs.fabric.microsoft.com/038d934f-db99-44f1-bd39-da7a7f68f078/Tables"
+# Construct the Silver ABFS paths dynamically using the workspace and Silver lakehouse IDs
+SILVER_ABFS_FILES = f"abfss://{workspace_id}@onelake.dfs.fabric.microsoft.com/{lakehouse_id_silver}/Files"
+SILVER_ABFS_TABLES = f"abfss://{workspace_id}@onelake.dfs.fabric.microsoft.com/{lakehouse_id_silver}/Tables"
+
+
 
 STAGING_CSV_FILES_PATH = f"{SILVER_ABFS_FILES}/silver_staged_csv/amortized_cost"
 TARGET_TABLE_LOCATION = f"{SILVER_ABFS_TABLES}/dbo/silver_amortized_cost"
 TARGET_TABLE_NAME = "dbo.silver_amortized_cost"
 
 print(f"Reading CSV from: {BRONZE_CSV_PATH}")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
 
 # ==========================================
 # 2. READ CSV FROM BRONZE
@@ -83,10 +150,21 @@ df_raw = (
 # Standardize column headers to lowercase
 df_lowercase = df_raw.toDF(*[c.lower() for c in df_raw.columns])
 
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+
 # ==========================================
 # 3. TRANSFORMATIONS & TYPE CASTING
 # ==========================================
 tag_map_schema = MapType(StringType(), StringType())
+
 
 df_transformed = (
     df_lowercase
@@ -113,7 +191,17 @@ df_transformed = (
     .withColumn("taghash", md5(coalesce(col("tags"), lit(""))))
     .withColumn("silverprocessedtimestamp", current_timestamp())
     .drop("tags_map")
+
 )
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
 
 # ==========================================
 # 4. STEP 1: SAVE CSV DIRECTLY TO SILVER LAKEHOUSE FILES
@@ -127,6 +215,15 @@ print(f"Exporting transformed data as CSV to Silver Files: {STAGING_CSV_FILES_PA
     .save(STAGING_CSV_FILES_PATH)
 )
 print("CSV successfully written to Silver Files path.")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
 
 # ==========================================
 # 5. STEP 2: CREATE EXTERNAL/MANAGED TABLE POINTING TO SILVER TABLES
@@ -144,6 +241,7 @@ df_staged_csv = (
     .load(STAGING_CSV_FILES_PATH)
 )
 
+
 # Write out as a Delta table explicitly bound to the Silver Lakehouse Tables path
 (
     df_staged_csv.write
@@ -155,6 +253,17 @@ df_staged_csv = (
 )
 
 print(f"Successfully created and registered '{TARGET_TABLE_NAME}' in the Silver Lakehouse!")
+
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
 
 # ==========================================
 # 6. SANITY CHECK

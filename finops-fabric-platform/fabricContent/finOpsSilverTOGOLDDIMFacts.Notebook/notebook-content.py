@@ -70,8 +70,10 @@ dim_date = (
     .withColumn("billingMonth", date_format(col("fullDate"), "MM").cast("int"))
 )
 
-dim_date.write.mode("overwrite").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimDate")
+dim_date.write.mode("append").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimDate")
 print("Successfully pushed 'dbo.dimDate' to Gold Warehouse!")
+
+#we would like to increment instead of overwrite.
 
 # METADATA ********************
 
@@ -101,7 +103,7 @@ df_resources = (
 window_res = Window.orderBy("resourceid")
 dim_resource = df_resources.withColumn("resourceKey", row_number().over(window_res))
 
-dim_resource.write.mode("overwrite").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimResource")
+dim_resource.write.mode("append").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimResource")
 print("Successfully pushed 'dbo.dimResource' to Gold Warehouse!")
 
 # METADATA ********************
@@ -132,7 +134,7 @@ df_costcenters = (
 window_cc = Window.orderBy("costcentercode")
 dim_costcenter = df_costcenters.withColumn("costCenterKey", row_number().over(window_cc))
 
-dim_costcenter.write.mode("overwrite").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimCostCenter")
+dim_costcenter.write.mode("append").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimCostCenter")
 print("Successfully pushed 'dbo.dimCostCenter' to Gold Warehouse!")
 
 # METADATA ********************
@@ -162,7 +164,7 @@ df_tags = (
 window_tags = Window.orderBy("taghash")
 dim_tags = df_tags.withColumn("tagKey", row_number().over(window_tags))
 
-dim_tags.write.mode("overwrite").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimTags")
+dim_tags.write.mode("append").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimTags")
 print("Successfully pushed 'dbo.dimTags' to Gold Warehouse!")
 
 # METADATA ********************
@@ -193,7 +195,7 @@ df_commitments = (
 window_comm = Window.orderBy("CommitmentId")
 dim_commitment = df_commitments.withColumn("CommitmentKey", row_number().over(window_comm))
 
-dim_commitment.write.mode("overwrite").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimCommitmentDiscount")
+dim_commitment.write.mode("append").synapsesql(f"{WAREHOUSE_NAME}.dbo.dimCommitmentDiscount")
 print("Successfully pushed 'dbo.dimCommitmentDiscount' to Gold Warehouse!")
 
 # METADATA ********************
@@ -242,7 +244,7 @@ window_fact = Window.orderBy(lit(1))
 fact_cost_final = fact_cost.withColumn("costFactKey", row_number().over(window_fact).cast("bigint"))
 
 # Write Fact Table to Warehouse
-fact_cost_final.write.mode("overwrite").synapsesql(f"{WAREHOUSE_NAME}.dbo.factCost")
+fact_cost_final.write.mode("append").synapsesql(f"{WAREHOUSE_NAME}.dbo.factCost")
 print("Successfully pushed 'dbo.factCost' to Gold Warehouse!")
 
 # METADATA ********************
