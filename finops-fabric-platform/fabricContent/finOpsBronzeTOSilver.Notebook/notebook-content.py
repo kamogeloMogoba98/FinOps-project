@@ -159,6 +159,17 @@ df_lowercase = df_raw.toDF(*[c.lower() for c in df_raw.columns])
 
 # CELL ********************
 
+df_lowercase,head(5)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
 
 # ==========================================
 # 3. TRANSFORMATIONS & TYPE CASTING

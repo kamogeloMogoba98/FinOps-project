@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "bronzeFilesStorage"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "246b5dbc-9148-95e8-4b5f-c97b8bd016c3"
+  }
+}

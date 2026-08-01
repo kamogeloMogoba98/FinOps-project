@@ -12,5 +12,6 @@ CREATE TABLE [dbo].[factCost] (
 	[listCost] float NULL, 
 	[usageQuantity] float NULL, 
 	[usageUnit] varchar(max) NULL, 
+	[insert_datetimestamp] datetime2(6) NOT NULL, 
 	[costFactKey] bigint NOT NULL
 );

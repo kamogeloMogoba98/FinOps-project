@@ -770,6 +770,21 @@
             ]
           },
           {
+            "name": "insert_datetimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "insert_datetimestamp",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "insert_datetimestamp",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
             "name": "costFactKey",
             "dataType": "int64",
             "sourceColumn": "costFactKey",
