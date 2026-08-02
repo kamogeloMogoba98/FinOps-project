@@ -43,7 +43,8 @@ resource "fabric_workspace_git" "workspace_git_sync" {
     repository_name   = var.repo_name
     branch_name       = var.branch_name
     directory_name    = "/fabricContent"
-  }
+  } 
+
 }
 
 output "git_sync_state" {

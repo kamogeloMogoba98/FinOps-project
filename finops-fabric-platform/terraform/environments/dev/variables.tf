@@ -3,8 +3,9 @@ variable "subscriptionId" {
   type        = string
 }
 
-variable "resourceGroupName" {
-  description = "Resource Group name"
+
+variable "baseResourceName" {
+  description = "Base name for resources"
   type        = string
 }
 
@@ -18,17 +19,13 @@ variable "environmentName" {
   type        = string
 }
 
-variable "storageAccountName" {
-  type = string
-}
+
 
 variable "containerNames" {
   type = list(string)
 }
 
-variable "workspaceName" {
-  default = "finops-dev-workspace"
-}
+
 
 variable "workspaceDescription" {
   default = "Development workspace for the FinOps Fabric Platform"
@@ -41,7 +38,7 @@ variable "warehouseName" {
   default = "goldWarehouse"
 }
 
-variable "capacity_name" {
-  description = "The Fabric Capacity display name"
+variable "capacity_display_name" {
   type        = string
+  description = "The friendly name of your Fabric capacity"
 }
