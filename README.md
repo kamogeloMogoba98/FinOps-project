@@ -10,7 +10,7 @@ The project is intentionally being built as a reusable foundation. The goal is t
 ```
 
 ```markdown
-![Azure](screenshots/images/Microsoft_Azure.svg)
+![Azure](screenshots/terraforminit.png)
 ```
 
 ```markdown
