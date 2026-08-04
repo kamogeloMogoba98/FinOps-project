@@ -109,6 +109,7 @@ Add the final architecture diagram here:
 
 ![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/FinOps-project/prod/screenshots/images/FinOps_finaldiagram.drawio)
 
+![overview diagram_x](https://github.com/kamogeloMogoba98/finops-project/blob/prod/screenshots/images/FinOps_finaldiagram.drawio)
 Recommended README placement:
 
 
