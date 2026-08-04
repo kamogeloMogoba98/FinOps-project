@@ -18,7 +18,7 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 ```
 
-![Terraform](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/screenshots/images/terraform.png)
+![Terraform](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/terraform.png)
 
 ![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/screenshots/images/Microsoft_Azure.svg)
 
