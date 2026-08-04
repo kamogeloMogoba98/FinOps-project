@@ -280,7 +280,7 @@ Before creating the Gold layer, the project defines:
 
 The model follows a **star schema** for the analytical layer.
 
----
+
 
 # Conceptual Data Model
 
@@ -289,6 +289,7 @@ The conceptual model describes the main business entities without focusing on im
 
 ![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/conceptualmodel.png)
 ```
+
 
 The central business event is **Cost**.
 
@@ -304,7 +305,7 @@ Business questions can then be answered by slicing cost across:
 - Department
 - Cost Center
 
----
+
 
 # Physical Data Model
 
@@ -356,7 +357,7 @@ Example physical structure:
 | UnitPrice | DECIMAL | Price per unit |
 | Currency | STRING | Billing currency |
 
----
+
 
 # Dimension Tables
 
