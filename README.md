@@ -287,7 +287,7 @@ The model follows a **star schema** for the analytical layer.
 The conceptual model describes the main business entities without focusing on implementation details.
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/conceptualmodel.png)
+![Conceptual](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/conceptualmodel.png)
 ```
 
 
