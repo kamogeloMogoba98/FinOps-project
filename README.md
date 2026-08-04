@@ -6,15 +6,15 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 
 ```markdown
-![Terraform](screenshots/images/Terraform.png)
+![Terraform](screenshots/images/terraform.png)
 ```
 
 ```markdown
-![Azure](screenshots/images/Micros_Azure.svg)
+![Azure](screenshots/images/Microsoft_Azure.svg)
 ```
 
 ```markdown
-![Microsoft Fabric](screenshots/images/fabric.png)
+![Microsoft Fabric](screenshots/images/Fabric_final_x256.png)
 ```
 
 
