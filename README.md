@@ -99,7 +99,7 @@ The platform should eventually be able to:
 The high-level overview:
 
 
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/FinOps-project/prod/screenshots/images/tech_daigram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/FinOps-project/prod/screenshots/images/techdaigram.png)
 
 
 
@@ -107,7 +107,7 @@ The high-level overview:
 
 Add the final architecture diagram here:
 
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/FinOps-project/prod/screenshots/images/FinOps_finaldiagram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/FinOps-project/prod/screenshots/images/FinOps_finaldiagram.drawio)
 
 Recommended README placement:
 
