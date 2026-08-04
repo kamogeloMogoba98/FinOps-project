@@ -107,7 +107,7 @@ The platform should eventually be able to:
 The high-level overview:
 
 ```markdown
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/tech_daigram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/tech_daigram.png)
 ```
 
 
@@ -116,12 +116,12 @@ The high-level overview:
 
 Add the final architecture diagram here:
 
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_final daigram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/FinOps_finaldaigram.png)
 
 Recommended README placement:
 
 ```markdown
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/fabric-workspace image.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabricworkspaceimage.png)
 ```
 
 ---
@@ -295,7 +295,7 @@ The model follows a **star schema** for the analytical layer.
 The conceptual model describes the main business entities without focusing on implementation details.
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/conceptual-model.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/conceptual-model.png)
 ```
 
 The central business event is **Cost**.
@@ -318,7 +318,7 @@ Business questions can then be answered by slicing cost across:
 
 The Gold layer is planned around the following dimensional model:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/physical-model.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/physicalmodel.png)
 
 # Fact_Cost
 
@@ -570,7 +570,7 @@ Gold
 
 Recommended visual diagram:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_finaldaigram.drawio)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/FinOps_finaldaigram.drawio)
 ---
 
 # Fabric Medallion Architecture
@@ -787,7 +787,7 @@ A CI/CD pipeline should eventually:
 
 Add a GitHub Actions or CI/CD diagram here:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/CICD image.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/CICDimage.png)
 ---
 
 # Environment Strategy
@@ -1412,14 +1412,14 @@ This creates a reusable foundation where infrastructure, data engineering, analy
 
 # Screenshots of the work
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/prodtestdev.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/prodtestdev.png)
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/fabricworkspace.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabricworkspace.png)
 
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/vscodeterraform.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/vscodeterraform.png)
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/resourcegroup.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/resourcegroup.png)
 
