@@ -286,7 +286,6 @@ The conceptual model describes the main business entities without focusing on im
 
 
 ![Conceptual](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/conceptualmodel.png)
-```
 
 
 The central business event is **Cost**.
