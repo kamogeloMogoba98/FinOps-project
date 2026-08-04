@@ -1409,7 +1409,7 @@ This creates a reusable foundation where infrastructure, data engineering, analy
 ![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/prodtestdev.png)
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabricworkspace.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabcricworkspace.png)
 
 
 
