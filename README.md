@@ -15,7 +15,14 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 ```markdown
 ![Microsoft Fabric](screenshots/images/Fabric_final_x256.png)
+
 ```
+
+![Terraform](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/terraform.png)
+
+![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/terraforminit.png)
+
+![Microsoft Fabric](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/Fabric_final_x256.png)
 
 
 ---
