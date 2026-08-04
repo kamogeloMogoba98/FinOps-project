@@ -4,6 +4,20 @@ An Infrastructure-as-Code FinOps platform built with **Azure, Terraform and Micr
 
 The project is intentionally being built as a reusable foundation. The goal is that the infrastructure can be recreated with Terraform instead of manually rebuilding Azure and Fabric resources every time the project is revisited.
 
+
+```markdown
+![Terraform](screenshots/images/Terraform.png)
+```
+
+```markdown
+![Azure](screenshots/images/Micros_Azure.svg)
+```
+
+```markdown
+![Microsoft Fabric](screenshots/images/fabric.png)
+```
+
+
 ---
 
 ## Table of Contents
@@ -78,46 +92,15 @@ The platform should eventually be able to:
 
 ---
 
-# Architecture Overview
+# Daigram Overview
 
-The high-level architecture is:
+The high-level overview:
 
-```text
-                         Azure
-                          |
-                          v
-                Azure Cost Management
-                          |
-                          | Cost Export
-                          v
-                 +-------------------+
-                 | ADLS Gen2 Storage  |
-                 |   costexports      |
-                 +-------------------+
-                          |
-                          | OneLake Shortcut
-                          v
-              +-------------------------+
-              | Microsoft Fabric        |
-              |                         |
-              |  Bronze Lakehouse       |
-              |        |                |
-              |        v                |
-              |  Silver Lakehouse       |
-              |        |                |
-              |        v                |
-              |  Gold Warehouse         |
-              +-------------------------+
-                          |
-                          v
-                 Semantic Model
-                          |
-                          v
-                     Power BI
-                          |
-                          v
-                FinOps Reporting
+```markdown
+![overview diagram](screenshots/images/fabric.png)
 ```
+
+
 
 ## Where to add the architecture image
 
