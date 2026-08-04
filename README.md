@@ -7,7 +7,7 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 
 
-<<<<<<< HEAD
+
 ![Terraform](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/terraform.png)
 
 ![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Microsoft_Azure.svg)
@@ -98,9 +98,8 @@ The platform should eventually be able to:
 
 The high-level overview:
 
-```markdown
+
 ![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/tech_daigram.png)
-```
 
 
 
@@ -112,9 +111,8 @@ Add the final architecture diagram here:
 
 Recommended README placement:
 
-```markdown
+
 ![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabricworkspaceimage.png)
-```
 
 ---
 
