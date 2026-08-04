@@ -310,7 +310,8 @@ Business questions can then be answered by slicing cost across:
 
 The Gold layer is planned around the following dimensional model:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/physicalmodel.png)
+
+![Terraforpm](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/physicalmodel.png)
 
 # Fact_Cost
 
