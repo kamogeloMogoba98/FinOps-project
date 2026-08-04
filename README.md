@@ -7,11 +7,25 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 
 
+<<<<<<< HEAD
 ![Terraform](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/terraform.png)
 
 ![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Microsoft_Azure.svg)
 
 ![Microsoft Fabric](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Fabric_final_x256.png)
+=======
+
+![Microsoft Fabric](screenshots/images/Fabric_final_x256.png)
+
+
+![Terraform](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/terraform.png)
+
+
+
+![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/terraforminit.png)
+
+![Microsoft Fabric](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/Fabric_final_x256.png)
+>>>>>>> e2b284d (send it)
 
 
 ---
@@ -93,7 +107,7 @@ The platform should eventually be able to:
 The high-level overview:
 
 ```markdown
-![overview diagram](screenshots/images/fabric.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/tech_daigram.png)
 ```
 
 
@@ -102,14 +116,12 @@ The high-level overview:
 
 Add the final architecture diagram here:
 
-```text
-docs/images/finops-architecture.png
-```
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_final daigram.png)
 
 Recommended README placement:
 
 ```markdown
-![FinOps Platform Architecture](docs/images/finops-architecture.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/fabric-workspace image.png)
 ```
 
 ---
@@ -133,18 +145,9 @@ The platform currently uses Azure and Microsoft Fabric services as the foundatio
 | Terraform | Infrastructure as Code |
 | GitHub | Source control and collaboration |
 
-## Service icons
 
-A visual version of this section can be added later with the official Azure and Microsoft Fabric icons side by side.
 
-Recommended layout:
 
-```text
-[Azure Cost Management]   [ADLS Gen2]   [Fabric]   [OneLake]   [Power BI]   [Terraform]
-        Export             Storage       Processing   Shortcut    Reporting       IaC
-```
-
----
 
 # Infrastructure as Code with Terraform
 
@@ -291,18 +294,8 @@ The model follows a **star schema** for the analytical layer.
 
 The conceptual model describes the main business entities without focusing on implementation details.
 
-```text
-                    Date
-                     |
-                     |
-Subscription ---- Cost ---- Service
-                     |
-                     |
-                  Resource
-                     |
-          +----------+----------+
-          |          |          |
-       Region    Department   Cost Center
+
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/Conceptual-model.png)
 ```
 
 The central business event is **Cost**.
@@ -325,50 +318,7 @@ Business questions can then be answered by slicing cost across:
 
 The Gold layer is planned around the following dimensional model:
 
-```text
-                         Dim_Date
-                            |
-                            |
-                            |
-Dim_Subscription -------- Fact_Cost -------- Dim_Service
-                            |
-                            |
-                       Dim_Region
-                            |
-                            |
-                       Dim_Resource
-                            |
-                            |
-                      Dim_Department
-                            |
-                            |
-                      Dim_CostCenter
-```
-
-A more traditional star-schema representation is:
-
-```text
-                       +-----------+
-                       | Dim_Date  |
-                       +-----+-----+
-                             |
-                             |
-+----------------+     +-----v-----+     +----------------+
-| Dim_Subscription|---->| Fact_Cost |<----| Dim_Service   |
-+----------------+     +-----+-----+     +----------------+
-                             |
-                +------------+------------+
-                |            |            |
-          +-----v----+ +-----v------+ +---v----------+
-          |Dim_Region| |Dim_Resource | |Dim_Department|
-          +----------+ +-------------+ +--------------+
-                             |
-                       +-----v------+
-                       |Dim_CostCenter|
-                       +-------------+
-```
-
----
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/physical-model.png)
 
 # Fact_Cost
 
@@ -582,43 +532,8 @@ Example rules:
 
 The ETL process follows the flow:
 
-```text
-Azure Cost Management
-        |
-        v
-CSV / Parquet Export
-        |
-        v
-ADLS Gen2
-costexports container
-        |
-        v
-OneLake Shortcut
-        |
-        v
-Bronze Lakehouse
-Raw data
-        |
-        v
-Cleaning / Validation
-        |
-        v
-Silver Lakehouse
-Standardised data
-        |
-        v
-Dimensional Transformations
-        |
-        v
-Gold Warehouse
-Fact + Dimensions
-        |
-        v
-Semantic Model
-        |
-        v
-Power BI
-```
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/tech daigram.png)
+
 
 ## ETL responsibilities
 
@@ -655,56 +570,7 @@ Gold
 
 Recommended visual diagram:
 
-```text
-+-------------------------+
-| Azure Cost Management  |
-+-----------+-------------+
-            |
-            | Export
-            v
-+-------------------------+
-| ADLS Gen2               |
-| costexports             |
-+-----------+-------------+
-            |
-            | OneLake Shortcut
-            v
-+-------------------------+
-| Bronze Lakehouse        |
-| Raw / Immutable         |
-+-----------+-------------+
-            |
-            | Clean + Validate
-            v
-+-------------------------+
-| Silver Lakehouse        |
-| Standardised            |
-+-----------+-------------+
-            |
-            | Model + Aggregate
-            v
-+-------------------------+
-| Gold Warehouse          |
-| Fact + Dimensions       |
-+-----------+-------------+
-            |
-            v
-+-------------------------+
-| Power BI Semantic Model |
-+-----------+-------------+
-            |
-            v
-+-------------------------+
-| FinOps Dashboards       |
-+-------------------------+
-```
-
-Add the final image here:
-
-```text
-docs/images/etl-workflow.png
-```
-
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_final daigram.png)
 ---
 
 # Fabric Medallion Architecture
@@ -831,21 +697,7 @@ The Terraform project invokes a PowerShell script through a `null_resource` prov
 
 Conceptually:
 
-```text
-Terraform
-   |
-   v
-bronzeShortcut module
-   |
-   v
-PowerShell
-   |
-   v
-Fabric REST API
-   |
-   v
-OneLake Shortcut
-```
+
 
 The Fabric API requires an ADLS Gen2 connection ID, storage location and subpath.
 
@@ -935,10 +787,7 @@ A CI/CD pipeline should eventually:
 
 Add a GitHub Actions or CI/CD diagram here:
 
-```text
-docs/images/cicd.png
-```
-
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/CICD image.png)
 ---
 
 # Environment Strategy
@@ -1239,6 +1088,16 @@ terraform destroy
 
 ---
 
+## create new workspace 
+
+Use carefully:
+
+```powershell
+terraform workspace select -or-create prod
+```
+
+---
+
 # Useful Azure Commands
 
 ## Login
@@ -1480,46 +1339,6 @@ The next stages of the project are:
 12. Add CI/CD
 ```
 
----
-
-# Final Architecture
-
-The intended end state is:
-
-```text
-                         GITHUB
-                           |
-                           v
-                    Terraform / CI/CD
-                           |
-             +-------------+-------------+
-             |                           |
-             v                           v
-           Azure                       Fabric
-             |                           |
-     +-------+--------+          +-------+--------+
-     |                |          |                |
-Resource Group   Cost Management Workspace    OneLake
-     |                |          |                |
-Storage Account   Cost Export   +--+-------------+
-     |                |          |  |             |
-costexports <-------+          Bronze Silver     Gold
-                                    |      |        |
-                                    +------+--------+
-                                           |
-                                           v
-                                    Semantic Model
-                                           |
-                                           v
-                                       Power BI
-                                           |
-                                           v
-                                   FinOps Insights
-```
-
-This project is intended to demonstrate not only how to analyse cloud costs, but how to build the infrastructure, data platform, modelling layer and reporting environment around those costs in a repeatable way.
-
----
 
 # Documentation and Diagrams
 
@@ -1589,3 +1408,18 @@ FinOps Decisions
 ```
 
 This creates a reusable foundation where infrastructure, data engineering, analytics and reporting are developed as one end-to-end platform.
+
+
+# Screenshots of the work
+
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/prod-test-dev.png)
+
+
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/fabric--workspace.png)
+
+
+
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/vscode terraform.png)
+
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/resource-group.png)
+
