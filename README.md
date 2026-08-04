@@ -107,12 +107,12 @@ The high-level overview:
 
 Add the final architecture diagram here:
 
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/FinOps_finaldaigram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/FinOps_finaldiagram.png)
 
 Recommended README placement:
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabricworkspaceimage.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabric-workspace image.png)
 
 ---
 
