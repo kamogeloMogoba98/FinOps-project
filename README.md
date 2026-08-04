@@ -295,7 +295,7 @@ The model follows a **star schema** for the analytical layer.
 The conceptual model describes the main business entities without focusing on implementation details.
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/Conceptual-model.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/conceptual-model.png)
 ```
 
 The central business event is **Cost**.
@@ -532,7 +532,7 @@ Example rules:
 
 The ETL process follows the flow:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/tech daigram.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/tech_daigram.png)
 
 
 ## ETL responsibilities
@@ -570,7 +570,7 @@ Gold
 
 Recommended visual diagram:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_final daigram.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_finaldaigram.drawio)
 ---
 
 # Fabric Medallion Architecture
@@ -1412,14 +1412,14 @@ This creates a reusable foundation where infrastructure, data engineering, analy
 
 # Screenshots of the work
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/prod-test-dev.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/prodtestdev.png)
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/fabric--workspace.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/fabricworkspace.png)
 
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/vscode terraform.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/vscodeterraform.png)
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/resource-group.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/resourcegroup.png)
 
