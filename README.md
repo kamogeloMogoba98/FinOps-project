@@ -1399,7 +1399,7 @@ This creates a reusable foundation where infrastructure, data engineering, analy
 
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/vscodeterraform.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/vscodeterraform1.png)
 
 ![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/resourcegroup.png)
 
