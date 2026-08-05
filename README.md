@@ -104,9 +104,9 @@ The platform should eventually be able to:
 
 The high-level overview:
 
-```markdown
+
 ![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/finopsnewdaigram.png)
-```
+
 
 
 
@@ -114,7 +114,7 @@ The high-level overview:
 
 Add the final architecture diagram here:
 
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_final daigram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_finaldaigram.png)
 
 Recommended README placement:
 
