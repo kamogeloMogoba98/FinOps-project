@@ -15,7 +15,7 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 
 
-![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Microsoft_Azure.png)
+![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Microsoft_Azure.svg)
 
 ![Microsoft Fabric](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Fabric_final_x256.png)
 
