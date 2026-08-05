@@ -5,13 +5,7 @@ An Infrastructure-as-Code FinOps platform built with **Azure, Terraform and Micr
 The project is intentionally being built as a reusable foundation. The goal is that the infrastructure can be recreated with Terraform instead of manually rebuilding Azure and Fabric resources every time the project is revisited.
 
 
-```markdown
-![Terraform](screenshots/images/terraform.png)
-```
 
-```markdown
-![Azure](screenshots/terraforminit.png)
-```
 
 
 ![Microsoft Fabric](screenshots/images/Fabric_final_x256.png)
@@ -21,7 +15,7 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 
 
-![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/terraforminit.png)
+![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Microsoft_Azure.png)
 
 ![Microsoft Fabric](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Fabric_final_x256.png)
 
