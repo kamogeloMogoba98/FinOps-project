@@ -1,7 +1,7 @@
 
 # FinOps Fabric Platform
 
-An Infrastructure-as-Code FinOps platform built with **Azure, Terraform and Microsoft Fabric**. The project is designed to ingest Azure Cost Management data, process it through a Medallion architecture, and expose curated financial information for analysis in Power BI.
+An Infrastructure-as-Code FinOps platform built with **Azure, Terraform and Microsoft Fabric**. The project is designed to ingest Azure Cost Management data, process it through a Medallion architecture, and expose curated financial information for analysis.
 
 The project is intentionally being built as a reusable foundation. The goal is that the infrastructure can be recreated with Terraform instead of manually rebuilding Azure and Fabric resources every time the project is revisited.
 
@@ -17,6 +17,10 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 
 ![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Microsoft_Azure.svg)
+
+
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/finopsnewdaigram.png)
+
 
 
 
