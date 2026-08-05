@@ -257,7 +257,12 @@ The final ingestion layer should therefore be designed to accommodate the actual
 
 Data modelling is important because the platform is not only storing costs. It needs to answer business questions.
 
+read more in this google--on my approach on this data modelling exercise:
+(https://docs.google.com/spreadsheets/d/1bJgjWkfDE1InX8WBE7q4YPKeAn5v7VFl0dl3qWFb58o/edit?gid=0#gid=0)
+
 Before creating the Gold layer, the project defines:
+
+
 
 - What a cost record represents
 - What dimensions describe that cost
