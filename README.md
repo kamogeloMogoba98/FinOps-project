@@ -17,7 +17,6 @@ The project is intentionally being built as a reusable foundation. The goal is t
 
 ![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Microsoft_Azure.svg)
 
-![Microsoft Fabric](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Fabric_final_x256.png)
 
 
 ---
@@ -108,7 +107,7 @@ The high-level overview:
 
 Add the final architecture diagram here:
 
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/FinOps_finaldaigram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/techdiagram.png)
 
 Recommended README placement:
 
@@ -287,7 +286,7 @@ The model follows a **star schema** for the analytical layer.
 The conceptual model describes the main business entities without focusing on implementation details.
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Conceptual-model.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Conceptualmodel.png)
 
 
 The central business event is **Cost**.
@@ -310,7 +309,7 @@ Business questions can then be answered by slicing cost across:
 
 The Gold layer is planned around the following dimensional model:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/physical-model.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/physicalmodel.png)
 
 # Fact_Cost
 
@@ -1407,11 +1406,11 @@ This creates a reusable foundation where infrastructure, data engineering, analy
 ![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/prodtestdev.png)
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabricworkspace.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabcricworkspace.png)
 
 
 
 ![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/vscodeterraform.png)
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/resourcegroup.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/resourcegroup.png)
 
