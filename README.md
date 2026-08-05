@@ -5,18 +5,25 @@ An Infrastructure-as-Code FinOps platform built with **Azure, Terraform and Micr
 The project is intentionally being built as a reusable foundation. The goal is that the infrastructure can be recreated with Terraform instead of manually rebuilding Azure and Fabric resources every time the project is revisited.
 
 
+```markdown
+![Terraform](screenshots/images/terraform.png)
+```
 
+```markdown
+![Azure](screenshots/terraforminit.png)
+```
 
 
 ![Microsoft Fabric](screenshots/images/Fabric_final_x256.png)
 
 
-![Terraform](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/terraform.png)
+![Terraform](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/terraform.png)
 
 
 
-![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/Microsoft_Azure.svg)
+![Azure](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/terraforminit.png)
 
+![Microsoft Fabric](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/Fabric_final_x256.png)
 
 
 ---
@@ -97,9 +104,9 @@ The platform should eventually be able to:
 
 The high-level overview:
 
-
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/finopsnewdaigram.png)
-
+```markdown
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/finopsnewdaigram.png)
+```
 
 
 
@@ -107,9 +114,13 @@ The high-level overview:
 
 Add the final architecture diagram here:
 
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/techdiagram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_final daigram.png)
 
+Recommended README placement:
 
+```markdown
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/fabric-workspace image.png)
+```
 
 ---
 
@@ -199,7 +210,15 @@ A simple Terraform diagram can be added here:
    Storage       Workspace     Variables
    Cost Export   Lakehouses
                  Warehouse
+```
 
+Recommended image location:
+
+```text
+docs/images/terraform-architecture.png
+```
+
+---
 
 # Data Source
 
@@ -274,8 +293,8 @@ The model follows a **star schema** for the analytical layer.
 The conceptual model describes the main business entities without focusing on implementation details.
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/conceptualmodel.png)
-
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/Conceptual-model.png)
+```
 
 The central business event is **Cost**.
 
@@ -291,13 +310,13 @@ Business questions can then be answered by slicing cost across:
 - Department
 - Cost Center
 
-
+---
 
 # Physical Data Model
 
 The Gold layer is planned around the following dimensional model:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/physicalmodel.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/physical-model.png)
 
 # Fact_Cost
 
@@ -342,7 +361,7 @@ Example physical structure:
 | UnitPrice | DECIMAL | Price per unit |
 | Currency | STRING | Billing currency |
 
-
+---
 
 # Dimension Tables
 
@@ -511,7 +530,7 @@ Example rules:
 
 The ETL process follows the flow:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/tech daigram.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/tech daigram.png)
 
 
 ## ETL responsibilities
@@ -549,8 +568,8 @@ Gold
 
 Recommended visual diagram:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/finopsnewdaigram.png)
-
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/FinOps_final daigram.png)
+---
 
 # Fabric Medallion Architecture
 
@@ -766,7 +785,7 @@ A CI/CD pipeline should eventually:
 
 Add a GitHub Actions or CI/CD diagram here:
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/CICDimage.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/CICD image.png)
 ---
 
 # Environment Strategy
@@ -1391,14 +1410,15 @@ This creates a reusable foundation where infrastructure, data engineering, analy
 
 # Screenshots of the work
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/prodtestdev.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/prod-test-dev.png)
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/fabcricworkspace.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/fabric--workspace.png)
 
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/vscodeterraform.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/vscode 
+terraform.png)
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-project/prod/screenshots/images/resourcegroup.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/resource-group.png)
 
