@@ -1,0 +1,14 @@
+[
+  {
+    "name": "CostExports",
+    "path": "/Files/CostExports",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "78d0ed62-6d0e-4828-8009-412ea63573ac",
+        "location": "https://stfinopsdev001.dfs.core.windows.net",
+        "subpath": "/costexports"
+      }
+    }
+  }
+]
