@@ -107,7 +107,7 @@ The platform should eventually be able to:
 The high-level overview:
 
 ```markdown
-![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/tech_daigram.png)
+![overview diagram](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/finopsnewdaigram.png)
 ```
 
 
@@ -1419,7 +1419,8 @@ This creates a reusable foundation where infrastructure, data engineering, analy
 
 
 
-![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/vscode terraform.png)
+![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/vscode 
+terraform.png)
 
 ![FinOps Platform Architecture](https://raw.githubusercontent.com/kamogeloMogoba98/finops-fabric-platform/prod/screenshots/images/resource-group.png)
 
