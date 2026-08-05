@@ -75,6 +75,12 @@ Rather than building a dashboard from an existing dataset alone, I wanted to bui
 
 ---
 
+# Documentation Write up 
+
+I wrote in detail in this documentation write up about the objective of this project, the step-by-step implementation process, and the data engineering principles applied throughout the project.
+
+(https://docs.google.com/document/d/1MSiInpuacosdp42tbvVPLsQCaS7uv5h8ewTHgE1TRsw/edit?tab=t.0)
+
 # Project Goals
 
 The platform should eventually be able to:
