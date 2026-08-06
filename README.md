@@ -104,7 +104,7 @@ The platform should eventually be able to:
 
 ---
 
-What you haveneed?
+What you need?
 
 The tfvar is not included in this repo because of gitignore to prevent the spread of unique ids 
 terraform.tfvars in the environment/dev folder 
