@@ -122,8 +122,11 @@ containerNames = [
   "terraformstate"
 ]
 
+
 capacity_display_name = "input your capacity"
 environmentName       = "prod"
+
+```
 
 Before deploying or syncing, ensure your Microsoft Fabric environment is configured correctly:
 
