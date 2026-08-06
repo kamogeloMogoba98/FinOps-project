@@ -104,6 +104,36 @@ The platform should eventually be able to:
 
 ---
 
+What you haveneed?
+
+The tfvar is not included in this repo because of gitignore to prevent the spread of unique ids 
+terraform.tfvars in the environment/dev folder 
+Add the following variables to your configuration file:
+
+```hcl
+
+subscriptionId        = " input your subscriptionid"
+baseResourceName      = "finops"
+locationName          = "South Africa North"
+
+containerNames = [
+  "costexports",
+  "landing",
+  "terraformstate"
+]
+
+capacity_display_name = "input your capacity"
+environmentName       = "prod"
+
+Before deploying or syncing, ensure your Microsoft Fabric environment is configured correctly:
+
+Enable External Git Integration: Navigate to your Fabric Admin Portal and provision/configure your workspace settings to allow Git integration outside the organization.
+
+Connect OneLake: Link your OneLake storage to the appropriate Fabric connectors to enable seamless data ingestion and state management.
+
+
+
+
 # Daigram Overview
 
 The high-level overview:
